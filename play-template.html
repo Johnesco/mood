@@ -108,44 +108,63 @@ MoodEngine.init({
   //  ROOM → ZONE MAPPING
   // ══════════════════════════════════════════════════════════════
   roomZones: {
-    // Floor 1
+    // Main Corridor (N-S spine)
     'Entrance Hall': 'entrance',
-    'Vibe Wing': 'cozy', 'Cozy Alcove': 'cozy',
-    'Stark Chamber': 'stark',
-    'Vibe Wing North': 'entrance',
-    'Retro Terminal': 'retro', 'Gothic Study': 'gothic',
-    'Clinical Suite': 'clinical', 'Custom Workshop': 'clinical',
-    'Color Gallery': 'entrance',
-    'Dark Passage': 'dark-color', 'Parchment Chamber': 'parchment-color',
-    'Ice Chamber': 'ice-color',
-    'Terminal Room': 'terminal-color', 'Sepia Room': 'sepia-color',
-    'Clinical Room': 'clinical-color',
-    'Typography Hall': 'typography', 'Font Showcase': 'typography',
-
-    // Floor 2
-    'Effects Corridor': 'effects',
-    'Tremor Room': 'effects', 'Flash Room': 'effects',
-    'Particle Hall': 'effects-particles',
-    'Shard Gallery': 'effects-particles', 'Spark Forge': 'effects-particles', 'Ember Pit': 'effects-particles',
-    'Reaction Hall': 'effects', 'Ripple Pool': 'effects-water', 'Glitch Lab': 'effects',
-    'Overlay Passage': 'effects', 'Vignette Nook': 'effects',
-    'Water Hall': 'effects-water', 'Flood Basin': 'effects-water', 'Drain Pit': 'effects-water',
-    'Sensation Hall': 'effects', 'Pulse Chamber': 'effects', 'Fade Corridor': 'effects',
-    'Inscription Hall': 'effects', 'Glow Script Room': 'effects', 'Inversion Chamber': 'effects',
-    'Arena Gate': 'effects', 'Shockwave Arena': 'effects', 'Aura Sanctum': 'effects-aura',
-    'Atmosphere Hall': 'atmosphere-leaves',
-    'Autumn Path': 'atmosphere-leaves', 'Snowfield': 'atmosphere-snow',
-    'Weather Crossing': 'atmosphere-rain',
-    'Storm Gallery': 'atmosphere-rain', 'Dust Archive': 'atmosphere-dust',
-    'Element Path': 'atmosphere-embers',
-    'Furnace Walk': 'atmosphere-embers', 'Twilight Garden': 'atmosphere-fireflies',
-
-    // Floor 3
+    'Palette Gallery': 'entrance',
+    'Vibe Showcase': 'cozy',
+    'Typography Hall': 'typography',
+    'Effects Lab': 'effects',
+    'Atmosphere Chamber': 'atmosphere-leaves',
     'Persistent Hall': 'persistent',
-    'Sway Chamber': 'persistent-sway', 'Glow Chamber': 'persistent-glow',
-    'State Corridor': 'state-corridor', 'Distortion Chamber': 'state-distortion',
-    'Trigger Lab': 'trigger-lab',
-    'The Vault': 'vault'
+    'State Machine': 'state-corridor',
+    'Trigger Workshop': 'trigger-lab',
+    'The Vault': 'vault',
+
+    // East Wing — Colors
+    'Dark Gallery': 'dark-color',
+    'Parchment Chamber': 'parchment-color',
+    'Sepia Passage': 'sepia-color',
+    'Terminal Bay': 'terminal-color',
+    'Ice Vault': 'ice-color',
+    'Clinical Bay': 'clinical-color',
+
+    // East Wing — Vibes
+    'Cozy Alcove': 'cozy',
+    'Stark Chamber': 'stark',
+    'Retro Terminal': 'retro',
+    'Gothic Study': 'gothic',
+    'Clinical Suite': 'clinical',
+    'Custom Workshop': 'clinical',
+
+    // East Wing — Typography
+    'Font Room': 'typography',
+
+    // East Wing — Effect Studios
+    'Shake Studio': 'effects',
+    'Flash Studio': 'effects',
+    'Particle Studio': 'effects-particles',
+    'Wave Studio': 'effects-water',
+
+    // East Wing — Atmosphere
+    'Autumn Path': 'atmosphere-leaves',
+    'Snowfield': 'atmosphere-snow',
+    'Storm Gallery': 'atmosphere-rain',
+    'Dust Archive': 'atmosphere-dust',
+    'Furnace Walk': 'atmosphere-embers',
+    'Twilight Garden': 'atmosphere-fireflies',
+
+    // East Wing — Persistent
+    'Sway Chamber': 'persistent-sway',
+    'Glow Chamber': 'persistent-glow',
+    'Aura Sanctum': 'effects-aura',
+
+    // East Wing — States
+    'Distortion Chamber': 'state-distortion',
+    'Chromatic Chamber': 'state-corridor',
+    'Static Chamber': 'state-corridor',
+
+    // East Wing — Triggers
+    'Trigger Lab': 'trigger-lab'
   },
 
   // ══════════════════════════════════════════════════════════════
@@ -203,21 +222,40 @@ MoodEngine.init({
   //  DECLARATIVE TRIGGERS
   // ══════════════════════════════════════════════════════════════
   triggers: [
-    // ── One-shot effects (text match) ──
-    { on: 'ground trembles',      effect: 'shake',     intensity: 0.8 },
-    { on: 'gentle tremor',        effect: 'shake',     intensity: 0.2 },
-    { on: 'Light erupts',         effect: 'flash',     intensity: 1.0, size: 'large' },
-    { on: 'dim flash',            effect: 'flash',     intensity: 0.3 },
-    { on: 'crystal shatters',     effect: 'particles', particle: 'glass', count: 20 },
-    { on: 'crystal shatters',     effect: 'shake',     intensity: 0.5 },
-    { on: 'Sparks fly',           effect: 'particles', particle: 'sparks', count: 25,
+    // ══════════════════════════════════════════════════════════════
+    //  ONE-SHOT EFFECTS — text match triggers
+    // ══════════════════════════════════════════════════════════════
+
+    // Shake (3 intensities)
+    { on: 'ground trembles',  effect: 'shake', intensity: 0.8 },
+    { on: 'gentle tremor',    effect: 'shake', intensity: 0.2 },
+    { on: /earthquake/i,      effect: 'shake', intensity: 1.0 },
+
+    // Flash (2 intensities)
+    { on: 'Light erupts',     effect: 'flash', intensity: 1.0, size: 'large' },
+    { on: 'dim flash',        effect: 'flash', intensity: 0.3 },
+
+    // Particles — glass (+ shake combo)
+    { on: 'crystal shatters', effect: 'particles', particle: 'glass', count: 20 },
+    { on: 'crystal shatters', effect: 'shake', intensity: 0.5 },
+
+    // Particles — sparks (multi-color)
+    { on: 'Sparks fly',       effect: 'particles', particle: 'sparks', count: 25,
       colors: ['#ff4400','#ffaa00','#ffffff','#ff8800','#ffdd00'] },
-    { on: 'Embers scatter',       effect: 'particles', particle: 'embers', count: 15 },
-    { on: 'Ripples spread',       effect: 'ripple',    duration: 3000 },
-    { on: 'Static crackles',      effect: 'glitch',    duration: 1500 },
-    { on: 'darkness closes in',   effect: 'vignette',  color: 'rgba(0,0,0,0.5)' },
-    { on: 'Water rises',          effect: 'flood',     duration: 3000 },
-    { on: 'water drains away',    effect: 'drain',     duration: 2000 },
+
+    // Particles — embers
+    { on: 'Embers scatter',   effect: 'particles', particle: 'embers', count: 15 },
+
+    // Ripple, Glitch, Vignette
+    { on: 'Ripples spread',       effect: 'ripple',   duration: 3000 },
+    { on: 'Static crackles',      effect: 'glitch',   duration: 1500 },
+    { on: 'darkness closes in',   effect: 'vignette', color: 'rgba(0,0,0,0.5)' },
+
+    // Water effects
+    { on: 'Water rises',          effect: 'flood', duration: 3000 },
+    { on: 'water drains away',    effect: 'drain', duration: 2000 },
+
+    // Pulse, Fade, TextGlow, Invert, Shockwave
     { on: 'crystal pulses',       effect: 'pulse',     color: '#a060ff', duration: 1200 },
     { on: 'Light fades to black', effect: 'fade-out',  duration: 1500 },
     { on: 'light returns',        effect: 'fade-in',   duration: 1500 },
@@ -226,11 +264,14 @@ MoodEngine.init({
     { on: 'shockwave expands',    effect: 'shockwave', count: 7, color: '#60c0ff', duration: 2500 },
     { on: 'shockwave expands',    effect: 'shake',     intensity: 0.6 },
 
-    // ── Regex triggers ──
-    { on: /placed .* on the pedestal/i, effect: 'textGlow', color: '#ffd700', duration: 2000 },
-    { on: /earthquake/i,                effect: 'shake',    intensity: 1.0 },
+    // ══════════════════════════════════════════════════════════════
+    //  REGEX TRIGGERS
+    // ══════════════════════════════════════════════════════════════
+    { on: /on the pedestal/i,   effect: 'textGlow', color: '#ffd700', duration: 2000 },
 
-    // ── Room-based: ambient particles (auto-clear on room exit) ──
+    // ══════════════════════════════════════════════════════════════
+    //  ROOM-BASED: ambient particles (auto-clear on room exit)
+    // ══════════════════════════════════════════════════════════════
     { onRoom: 'Autumn Path',      effect: 'ambient', particle: 'leaves',    count: 25 },
     { onRoom: 'Snowfield',        effect: 'ambient', particle: 'snow',      count: 30 },
     { onRoom: 'Storm Gallery',    effect: 'ambient', particle: 'rain',      count: 40 },
@@ -238,20 +279,28 @@ MoodEngine.init({
     { onRoom: 'Furnace Walk',     effect: 'ambient', particle: 'embers',    count: 20 },
     { onRoom: 'Twilight Garden',  effect: 'ambient', particle: 'fireflies', count: 25 },
 
-    // ── Room-based: persistent effects (auto-clear on room exit) ──
+    // ══════════════════════════════════════════════════════════════
+    //  ROOM-BASED: persistent effects (auto-clear on room exit)
+    // ══════════════════════════════════════════════════════════════
     { onRoom: 'Sway Chamber',    effect: 'sway', speed: 10, intensity: 0.6 },
     { onRoom: 'Glow Chamber',    effect: 'glow', color: 'rgba(80,60,200,0.08)', speed: 6 },
 
-    // ── Room-based: aura (toggle on/off) ──
+    // ══════════════════════════════════════════════════════════════
+    //  ROOM-BASED: aura (toggle on enter/leave)
+    // ══════════════════════════════════════════════════════════════
     { onRoom: 'Aura Sanctum',      effect: 'aura', color: 'rgba(80,130,255,0.2)', intensity: 'faint' },
     { onLeaveRoom: 'Aura Sanctum', clearEffect: 'aura' },
 
-    // ── Zone-based triggers ──
-    { onZone: 'effects',     effect: 'pulse', color: '#a090c0', duration: 800, once: true },
+    // ══════════════════════════════════════════════════════════════
+    //  ZONE-BASED TRIGGERS
+    // ══════════════════════════════════════════════════════════════
+    { onZone: 'effects',           effect: 'pulse', color: '#a090c0', duration: 800, once: true },
     { onZone: 'atmosphere-leaves', effect: 'flash', intensity: 0.2, color: 'rgba(100,200,100,0.4)', once: true },
-    { onLeaveZone: 'retro',  effect: 'glitch', duration: 500 },
+    { onLeaveZone: 'retro',        effect: 'glitch', duration: 500 },
 
-    // ── State triggers (text match → setState/clearState) ──
+    // ══════════════════════════════════════════════════════════════
+    //  STATE TRIGGERS (text match → setState / clearState)
+    // ══════════════════════════════════════════════════════════════
     { on: 'perception warps',          setState: 'distortion', once: true },
     { on: 'perception clears',         clearState: 'distortion' },
     { on: 'chromatic shift begins',    setState: 'chromatic', once: true },
