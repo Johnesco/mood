@@ -56,7 +56,7 @@ Part 2 - The Main Corridor
 
 Chapter 1 - Entrance Hall
 
-The Entrance Hall is a room. The Entrance Hall is in the Main Corridor. "A grand foyer of obsidian and brass. A plaque on the wall reads: [apostrophe]Welcome to the Mood Gallery.[apostrophe][paragraph break]The corridor stretches north. A warm glow beckons from the east."
+The Entrance Hall is a room. The Entrance Hall is in the Main Corridor. "A grand foyer of obsidian and brass. A plaque on the wall reads: [apostrophe]Welcome to the Mood Gallery.[apostrophe][paragraph break]The corridor stretches north."
 
 The player is in the Entrance Hall.
 
@@ -146,30 +146,30 @@ A drain-button is a demo-button in the Effects Lab. The printed name is "drain b
 Instead of pushing the drain-button: say "The water drains away with a thunderous roar."
 
 A fade-button is a demo-button in the Effects Lab. The printed name is "fade button". The description is "Labeled FADE." Understand "fade" as the fade-button.
-Instead of pushing the fade-button: say "Light fades to black. A moment of nothing. Then, slowly, light returns."
+Instead of pushing the fade-button: say "Light fades to black."
 
 Chapter 6 - Atmosphere Chamber
 
 The Atmosphere Chamber is north of the Effects Lab. The Atmosphere Chamber is in the Main Corridor. "A crossroads of weather systems. You feel wind from the west, warmth from below, and cold from above -- all at once.[paragraph break]Individual weather rooms lie east. The corridor continues north and south."
 
-A leaves-button is a demo-button in the Atmosphere Chamber. The printed name is "leaves button". The description is "Labeled LEAVES." Understand "leaves" as the leaves-button.
-Instead of pushing the leaves-button: say "Golden leaves drift from the ceiling, spinning lazily."
+A leaves-button is a demo-button in the Atmosphere Chamber. The printed name is "leaves button". The description is "Labeled LEAVES. (Visit the Autumn Path to the east for the full ambient effect.)" Understand "leaves" as the leaves-button.
+Instead of pushing the leaves-button: say "A preview -- but for the full effect, walk east to the Autumn Path where leaves fall endlessly."
 
-A snow-button is a demo-button in the Atmosphere Chamber. The printed name is "snow button". The description is "Labeled SNOW." Understand "snow" as the snow-button.
-Instead of pushing the snow-button: say "Soft white flakes begin to fall. The silence deepens."
+A snow-button is a demo-button in the Atmosphere Chamber. The printed name is "snow button". The description is "Labeled SNOW. (Visit the Snowfield to the east.)" Understand "snow" as the snow-button.
+Instead of pushing the snow-button: say "A preview -- but for the full effect, walk east to the Snowfield where snow never stops."
 
-A rain-button is a demo-button in the Atmosphere Chamber. The printed name is "rain button". The description is "Labeled RAIN." Understand "rain" as the rain-button.
-Instead of pushing the rain-button: say "Rain streaks down from above. Thunder rumbles in the distance."
+A rain-button is a demo-button in the Atmosphere Chamber. The printed name is "rain button". The description is "Labeled RAIN. (Visit the Storm Gallery to the east.)" Understand "rain" as the rain-button.
+Instead of pushing the rain-button: say "A preview -- but for the full effect, walk east to the Storm Gallery."
 
 Chapter 7 - Persistent Hall
 
 Persistent Hall is north of the Atmosphere Chamber. Persistent Hall is in the Main Corridor. "A quiet corridor of dark marble where effects linger rather than flash. The air feels thick with accumulated presence.[paragraph break]The persistent effect rooms lie east. The corridor continues north and south."
 
-A sway-button is a demo-button in Persistent Hall. The printed name is "sway button". The description is "Labeled SWAY." Understand "sway" as the sway-button.
-Instead of pushing the sway-button: say "The room tilts gently. The world begins to rock like a ship at sea."
+A sway-button is a demo-button in Persistent Hall. The printed name is "sway button". The description is "Labeled SWAY. (Visit the Sway Chamber to the east for the persistent effect.)" Understand "sway" as the sway-button.
+Instead of pushing the sway-button: say "Persistent effects need their own rooms. Walk east to the Sway Chamber to feel the world tilt."
 
-A glow-button is a demo-button in Persistent Hall. The printed name is "glow button". The description is "Labeled GLOW." Understand "glow" as the glow-button.
-Instead of pushing the glow-button: say "A soft phosphorescent light pulses through the walls."
+A glow-button is a demo-button in Persistent Hall. The printed name is "glow button". The description is "Labeled GLOW. (Visit the Glow Chamber to the east.)" Understand "glow" as the glow-button.
+Instead of pushing the glow-button: say "Persistent effects need their own rooms. Walk east to the Glow Chamber to see the phosphorescent pulse."
 
 Chapter 8 - State Machine
 
@@ -375,6 +375,8 @@ The Static Chamber is east of the Chromatic Chamber. The Static Chamber is in th
 
 Part 10 - East Wing - Trigger Lab
 
-The Trigger Lab is east of the Trigger Workshop. The Trigger Lab is in the East Wing. "A deeper testing space with more specialized equipment. Sensor arrays cover the walls, tracking your every movement and word.[paragraph break]The Trigger Workshop is west."
+The Trigger Lab is east of the Trigger Workshop. The Trigger Lab is in the East Wing. "A deeper testing space with specialized equipment. Sensor arrays cover the walls. A large instructional sign hangs above the door.[paragraph break]The Trigger Workshop is west."
 
 A sensor array is scenery in the Trigger Lab. The description is "The arrays detect text patterns, room transitions, zone changes, and game states. They can fire once or repeatedly, immediately or with a delay."
+
+An instructional sign is scenery in the Trigger Lab. The description is "The sign reads:[paragraph break][bold type]TRIGGER TYPES DEMONSTRATED[roman type][paragraph break]TEXT MATCH: Push buttons in the Effects Lab (west, then south). Each button outputs text that the engine matches.[paragraph break]REGEX: The test button in the Trigger Workshop matches the word [apostrophe]earthquake[apostrophe] anywhere in text.[paragraph break]ROOM ENTER: Walk into any Atmosphere room (Autumn Path, Snowfield, etc.) to see ambient particles start automatically.[paragraph break]ROOM LEAVE: Walk out of the Aura Sanctum to see the aura clear.[paragraph break]ZONE ENTER: Enter the effects zone for a one-time welcome pulse. Enter the atmosphere zone for a green flash.[paragraph break]ZONE LEAVE: Leave the Retro Terminal zone for a brief glitch.[paragraph break]STATES: Push the dials in the State Machine to activate distortion, chromatic, or static states. Pull them to clear.[paragraph break]DELAYED: The static switch activates after a 2-second delay.[paragraph break]ONCE: Zone-enter triggers fire only the first time.[paragraph break]PEDESTAL: Place any artifact on a pedestal in The Vault to see a golden text glow." Understand "instructions" or "sign" as the instructional sign.
