@@ -1,0 +1,301 @@
+<!-- Mood Gallery — MoodEngine v2 comprehensive showcase
+     Every engine feature demonstrated: vibes, presets, palettes, triggers,
+     effects, states, ambient particles, persistent effects, intro mode.
+
+     Template tokens (substituted by setup_web.py / compile.py):
+       Mood Gallery      — Game title
+       mood.ulx.js — Binary filename
+       lib/parchment/mood.ulx.js — Full path to binary
+       lib/parchment/   — Parchment library path
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mood Gallery</title>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="stylesheet" href="lib/parchment/parchment.css?v=1773740698">
+<link rel="stylesheet" href="lib/parchment/main.css?v=1773740698">
+</head>
+<body style="background:#0a0a0a; margin:0; overflow:hidden">
+
+<div id="gameport">
+  <div id="windowport">
+    <noscript>
+      <div style="text-align:center; padding:40px; color:#708090;">
+        <h2>Mood Gallery</h2>
+        <p>JavaScript is required to play this game.</p>
+      </div>
+    </noscript>
+  </div>
+  <div id="loadingpane">
+    <div style="margin-bottom:20px; font-size:1.4em; color:#607080; letter-spacing:6px;">MOOD GALLERY</div>
+    <img src="lib/parchment/waiting.gif" alt="Loading" style="opacity:0.4"><br>
+    <em>Loading...</em>
+  </div>
+  <div id="errorpane" style="display:none;">
+    <div id="errorcontent">...</div>
+  </div>
+</div>
+
+<script src="lib/parchment/jquery.min.js?v=1773740698"></script>
+<script src="lib/parchment/ie.js?v=1773740698" nomodule></script>
+<script>
+parchment_options = {
+  default_story: ['lib/parchment/mood.ulx.js'],
+  lib_path: 'lib/parchment/',
+  story_name: 'mood.ulx.js',
+  use_proxy: 0,
+  do_vm_autosave: 1
+};
+</script>
+<script src="lib/parchment/parchment.js?v=1773740698"></script>
+<script src="lib/parchment/resourcemap.js?v=1773740698"></script>
+<script src="lib/parchment/mood-engine.js?v=1773740698"></script>
+
+<script>
+MoodEngine.init({
+
+  // ── Base vibe + CRT intro ──
+  vibe: 'stark',
+  intro: 'crt',
+  transition: 1.0,
+
+  // ══════════════════════════════════════════════════════════════
+  //  ZONE PALETTES — 28 zones across 3 floors
+  // ══════════════════════════════════════════════════════════════
+  palettes: {
+    // Floor 1 — Ground Level
+    entrance:          { bufferBg:'#0a0a0a', bufferFg:'#c0c0c0', gridBg:'#141414', gridFg:'#808080', accent:'#d0b870', uiBg:'#0a0a0a', border:'#1e1e1e' },
+    cozy:              { bufferBg:'#1a1408', bufferFg:'#e8d8b0', gridBg:'#2a1a08', gridFg:'#c09040', accent:'#f0c060', uiBg:'#1a1408', border:'#3a2810' },
+    stark:             { bufferBg:'#111111', bufferFg:'#c8c4b8', gridBg:'#1a1814', gridFg:'#908870', accent:'#d0b870', uiBg:'#111111', border:'#2a2418' },
+    retro:             { bufferBg:'#0a0a0a', bufferFg:'#33ff00', gridBg:'#0a0a0a', gridFg:'#22aa00', accent:'#33ff00', uiBg:'#0a0a0a', border:'#1a3a00' },
+    gothic:            { bufferBg:'#181210', bufferFg:'#d0c0a0', gridBg:'#241c14', gridFg:'#a09070', accent:'#c0a060', uiBg:'#181210', border:'#302418' },
+    clinical:          { bufferBg:'#0e0e12', bufferFg:'#c0beb8', gridBg:'#161420', gridFg:'#808090', accent:'#9098b0', uiBg:'#0e0e12', border:'#1e1e28' },
+    'dark-color':      { bufferBg:'#111111', bufferFg:'#c8c4b8', gridBg:'#1a1814', gridFg:'#908870', accent:'#d0b870', uiBg:'#111111', border:'#2a2418' },
+    'parchment-color': { bufferBg:'#1a1408', bufferFg:'#e8d8b0', gridBg:'#2a1a08', gridFg:'#c09040', accent:'#f0c060', uiBg:'#1a1408', border:'#3a2810' },
+    'sepia-color':     { bufferBg:'#181210', bufferFg:'#d0c0a0', gridBg:'#241c14', gridFg:'#a09070', accent:'#c0a060', uiBg:'#181210', border:'#302418' },
+    'terminal-color':  { bufferBg:'#0a0a0a', bufferFg:'#33ff00', gridBg:'#0a0a0a', gridFg:'#22aa00', accent:'#33ff00', uiBg:'#0a0a0a', border:'#1a3a00' },
+    'ice-color':       { bufferBg:'#0a0c14', bufferFg:'#b0c0d8', gridBg:'#0e1018', gridFg:'#6080a0', accent:'#80b0e0', uiBg:'#0a0c14', border:'#142030' },
+    'clinical-color':  { bufferBg:'#0e0e12', bufferFg:'#c0beb8', gridBg:'#161420', gridFg:'#808090', accent:'#9098b0', uiBg:'#0e0e12', border:'#1e1e28' },
+    typography:        { bufferBg:'#101010', bufferFg:'#c0c0c0', gridBg:'#181818', gridFg:'#888888', accent:'#b8b8b8', uiBg:'#101010', border:'#242424' },
+
+    // Floor 2 — Effects Level
+    effects:             { bufferBg:'#0c0c10', bufferFg:'#b8b4c0', gridBg:'#14141c', gridFg:'#707088', accent:'#a090c0', uiBg:'#0c0c10', border:'#1c1c28' },
+    'effects-particles': { bufferBg:'#100c08', bufferFg:'#d0c0a0', gridBg:'#1a1408', gridFg:'#907840', accent:'#c09840', uiBg:'#100c08', border:'#282010' },
+    'effects-water':     { bufferBg:'#0a0e14', bufferFg:'#a8c0d8', gridBg:'#0e1420', gridFg:'#5888a8', accent:'#60a8d0', uiBg:'#0a0e14', border:'#142030' },
+    'effects-aura':      { bufferBg:'#0a0a14', bufferFg:'#b0b0d0', gridBg:'#101020', gridFg:'#606088', accent:'#8080c0', uiBg:'#0a0a14', border:'#181830' },
+    'atmosphere-leaves': { bufferBg:'#12100a', bufferFg:'#c0b890', gridBg:'#1c1810', gridFg:'#8a7848', accent:'#a89040', uiBg:'#12100a', border:'#242010' },
+    'atmosphere-snow':   { bufferBg:'#0c0e14', bufferFg:'#c0c8d8', gridBg:'#101420', gridFg:'#6878a0', accent:'#8098c0', uiBg:'#0c0e14', border:'#141c30' },
+    'atmosphere-rain':   { bufferBg:'#0a0c10', bufferFg:'#98a8b8', gridBg:'#0e1218', gridFg:'#506878', accent:'#608898', uiBg:'#0a0c10', border:'#141a20' },
+    'atmosphere-dust':   { bufferBg:'#141008', bufferFg:'#c8b890', gridBg:'#1e1808', gridFg:'#907840', accent:'#b09040', uiBg:'#141008', border:'#282010' },
+    'atmosphere-embers': { bufferBg:'#140a08', bufferFg:'#d0a880', gridBg:'#1e1008', gridFg:'#a07030', accent:'#d08830', uiBg:'#140a08', border:'#281408' },
+    'atmosphere-fireflies': { bufferBg:'#0a0e08', bufferFg:'#a0c090', gridBg:'#101a0c', gridFg:'#608848', accent:'#70b050', uiBg:'#0a0e08', border:'#1c280c' },
+
+    // Floor 3 — Advanced Level
+    persistent:          { bufferBg:'#100c14', bufferFg:'#c0b0d0', gridBg:'#1a1420', gridFg:'#806898', accent:'#a080c0', uiBg:'#100c14', border:'#201830' },
+    'persistent-sway':   { bufferBg:'#0e0c14', bufferFg:'#b8b0c8', gridBg:'#181420', gridFg:'#706090', accent:'#9078b0', uiBg:'#0e0c14', border:'#1e1828' },
+    'persistent-glow':   { bufferBg:'#0c1010', bufferFg:'#a0c0b8', gridBg:'#101a18', gridFg:'#5a8878', accent:'#68a898', uiBg:'#0c1010', border:'#182820' },
+    'state-corridor':    { bufferBg:'#0e0a10', bufferFg:'#b8a8c0', gridBg:'#181028', gridFg:'#705888', accent:'#9060b0', uiBg:'#0e0a10', border:'#201430' },
+    'state-distortion':  { bufferBg:'#14100c', bufferFg:'#c8b898', gridBg:'#1e180e', gridFg:'#907848', accent:'#c09030', uiBg:'#14100c', border:'#281e10' },
+    'trigger-lab':       { bufferBg:'#141008', bufferFg:'#d0c090', gridBg:'#1e1808', gridFg:'#a08840', accent:'#d0a830', uiBg:'#141008', border:'#282008' },
+    vault:               { bufferBg:'#08080c', bufferFg:'#a8a8b8', gridBg:'#101018', gridFg:'#606078', accent:'#8080a0', uiBg:'#08080c', border:'#181828' }
+  },
+
+  fallbackZone: 'entrance',
+
+  // ══════════════════════════════════════════════════════════════
+  //  ROOM → ZONE MAPPING
+  // ══════════════════════════════════════════════════════════════
+  roomZones: {
+    // Floor 1
+    'Entrance Hall': 'entrance',
+    'Vibe Wing': 'cozy', 'Cozy Alcove': 'cozy',
+    'Stark Chamber': 'stark',
+    'Vibe Wing North': 'entrance',
+    'Retro Terminal': 'retro', 'Gothic Study': 'gothic',
+    'Clinical Suite': 'clinical', 'Custom Workshop': 'clinical',
+    'Color Gallery': 'entrance',
+    'Dark Passage': 'dark-color', 'Parchment Chamber': 'parchment-color',
+    'Ice Chamber': 'ice-color',
+    'Terminal Room': 'terminal-color', 'Sepia Room': 'sepia-color',
+    'Clinical Room': 'clinical-color',
+    'Typography Hall': 'typography', 'Font Showcase': 'typography',
+
+    // Floor 2
+    'Effects Corridor': 'effects',
+    'Tremor Room': 'effects', 'Flash Room': 'effects',
+    'Particle Hall': 'effects-particles',
+    'Shard Gallery': 'effects-particles', 'Spark Forge': 'effects-particles', 'Ember Pit': 'effects-particles',
+    'Reaction Hall': 'effects', 'Ripple Pool': 'effects-water', 'Glitch Lab': 'effects',
+    'Overlay Passage': 'effects', 'Vignette Nook': 'effects',
+    'Water Hall': 'effects-water', 'Flood Basin': 'effects-water', 'Drain Pit': 'effects-water',
+    'Sensation Hall': 'effects', 'Pulse Chamber': 'effects', 'Fade Corridor': 'effects',
+    'Inscription Hall': 'effects', 'Glow Script Room': 'effects', 'Inversion Chamber': 'effects',
+    'Arena Gate': 'effects', 'Shockwave Arena': 'effects', 'Aura Sanctum': 'effects-aura',
+    'Atmosphere Hall': 'atmosphere-leaves',
+    'Autumn Path': 'atmosphere-leaves', 'Snowfield': 'atmosphere-snow',
+    'Weather Crossing': 'atmosphere-rain',
+    'Storm Gallery': 'atmosphere-rain', 'Dust Archive': 'atmosphere-dust',
+    'Element Path': 'atmosphere-embers',
+    'Furnace Walk': 'atmosphere-embers', 'Twilight Garden': 'atmosphere-fireflies',
+
+    // Floor 3
+    'Persistent Hall': 'persistent',
+    'Sway Chamber': 'persistent-sway', 'Glow Chamber': 'persistent-glow',
+    'State Corridor': 'state-corridor', 'Distortion Chamber': 'state-distortion',
+    'Trigger Lab': 'trigger-lab',
+    'The Vault': 'vault'
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  //  STATES — palette overrides + persistent effects
+  // ══════════════════════════════════════════════════════════════
+  states: {
+    distortion: {
+      palettes: {
+        'state-distortion': {
+          bufferBg:'#18140a', bufferFg:'#d0c090', gridBg:'#241c0a', gridFg:'#a08830',
+          accent:'#d0a020', uiBg:'#18140a', border:'#302408'
+        }
+      },
+      effects: {
+        distortion: { duration: 30, intensity: 0.7 },
+        vignette: { duration: 30 }
+      }
+    },
+    chromatic: {
+      palettes: {
+        'state-corridor': {
+          bufferBg:'#100a14', bufferFg:'#c0a8d0', gridBg:'#1a1028', gridFg:'#785898',
+          accent:'#a060c8', uiBg:'#100a14', border:'#201438'
+        }
+      },
+      effects: {
+        chromatic: { frequency: 5, intensity: 0.35 }
+      }
+    },
+    'visual-static': {
+      palettes: {
+        'state-corridor': {
+          bufferBg:'#0c0e10', bufferFg:'#a0a8b0', gridBg:'#141820', gridFg:'#607080',
+          accent:'#7090a8', uiBg:'#0c0e10', border:'#1a2028'
+        }
+      },
+      effects: {
+        'static': { frequency: 6, intensity: 0.08 }
+      }
+    },
+    celebration: {
+      palettes: {
+        vault: {
+          bufferBg:'#14100a', bufferFg:'#f0d890', gridBg:'#201808', gridFg:'#d0a040',
+          accent:'#ffd700', uiBg:'#14100a', border:'#302010'
+        }
+      },
+      effects: {
+        chromatic: { frequency: 8, intensity: 0.15 }
+      }
+    }
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  //  DECLARATIVE TRIGGERS
+  // ══════════════════════════════════════════════════════════════
+  triggers: [
+    // ── One-shot effects (text match) ──
+    { on: 'ground trembles',      effect: 'shake',     intensity: 0.8 },
+    { on: 'gentle tremor',        effect: 'shake',     intensity: 0.2 },
+    { on: 'Light erupts',         effect: 'flash',     intensity: 1.0, size: 'large' },
+    { on: 'dim flash',            effect: 'flash',     intensity: 0.3 },
+    { on: 'crystal shatters',     effect: 'particles', particle: 'glass', count: 20 },
+    { on: 'crystal shatters',     effect: 'shake',     intensity: 0.5 },
+    { on: 'Sparks fly',           effect: 'particles', particle: 'sparks', count: 25,
+      colors: ['#ff4400','#ffaa00','#ffffff','#ff8800','#ffdd00'] },
+    { on: 'Embers scatter',       effect: 'particles', particle: 'embers', count: 15 },
+    { on: 'Ripples spread',       effect: 'ripple',    duration: 3000 },
+    { on: 'Static crackles',      effect: 'glitch',    duration: 1500 },
+    { on: 'darkness closes in',   effect: 'vignette',  color: 'rgba(0,0,0,0.5)' },
+    { on: 'Water rises',          effect: 'flood',     duration: 3000 },
+    { on: 'water drains away',    effect: 'drain',     duration: 2000 },
+    { on: 'crystal pulses',       effect: 'pulse',     color: '#a060ff', duration: 1200 },
+    { on: 'Light fades to black', effect: 'fade-out',  duration: 1500 },
+    { on: 'light returns',        effect: 'fade-in',   duration: 1500 },
+    { on: 'ancient words glow',   effect: 'textGlow',  color: '#ffd700', duration: 3000 },
+    { on: 'Reality inverts',      effect: 'invert',    duration: 800 },
+    { on: 'shockwave expands',    effect: 'shockwave', count: 7, color: '#60c0ff', duration: 2500 },
+    { on: 'shockwave expands',    effect: 'shake',     intensity: 0.6 },
+
+    // ── Regex triggers ──
+    { on: /placed .* on the pedestal/i, effect: 'textGlow', color: '#ffd700', duration: 2000 },
+    { on: /earthquake/i,                effect: 'shake',    intensity: 1.0 },
+
+    // ── Room-based: ambient particles (auto-clear on room exit) ──
+    { onRoom: 'Autumn Path',      effect: 'ambient', particle: 'leaves',    count: 25 },
+    { onRoom: 'Snowfield',        effect: 'ambient', particle: 'snow',      count: 30 },
+    { onRoom: 'Storm Gallery',    effect: 'ambient', particle: 'rain',      count: 40 },
+    { onRoom: 'Dust Archive',     effect: 'ambient', particle: 'dust',      count: 20 },
+    { onRoom: 'Furnace Walk',     effect: 'ambient', particle: 'embers',    count: 20 },
+    { onRoom: 'Twilight Garden',  effect: 'ambient', particle: 'fireflies', count: 25 },
+
+    // ── Room-based: persistent effects (auto-clear on room exit) ──
+    { onRoom: 'Sway Chamber',    effect: 'sway', speed: 10, intensity: 0.6 },
+    { onRoom: 'Glow Chamber',    effect: 'glow', color: 'rgba(80,60,200,0.08)', speed: 6 },
+
+    // ── Room-based: aura (toggle on/off) ──
+    { onRoom: 'Aura Sanctum',      effect: 'aura', color: 'rgba(80,130,255,0.2)', intensity: 'faint' },
+    { onLeaveRoom: 'Aura Sanctum', clearEffect: 'aura' },
+
+    // ── Zone-based triggers ──
+    { onZone: 'effects',     effect: 'pulse', color: '#a090c0', duration: 800, once: true },
+    { onZone: 'atmosphere-leaves', effect: 'flash', intensity: 0.2, color: 'rgba(100,200,100,0.4)', once: true },
+    { onLeaveZone: 'retro',  effect: 'glitch', duration: 500 },
+
+    // ── State triggers (text match → setState/clearState) ──
+    { on: 'perception warps',          setState: 'distortion', once: true },
+    { on: 'perception clears',         clearState: 'distortion' },
+    { on: 'chromatic shift begins',    setState: 'chromatic', once: true },
+    { on: 'Colors normalize',          clearState: 'chromatic' },
+    { on: 'Static fills your vision',  setState: 'visual-static', delay: 2000, once: true },
+    { on: 'static fades',              clearState: 'visual-static' }
+  ],
+
+  // ══════════════════════════════════════════════════════════════
+  //  CELEBRATION CALLBACK — fires when all 10 artifacts placed
+  // ══════════════════════════════════════════════════════════════
+  onBufferText: function(text) {
+    if (/The gallery resonates/i.test(text)) {
+      MoodEngine.fireEffect('shake', { intensity: 0.5 });
+      MoodEngine.setState('celebration');
+      setTimeout(function() {
+        MoodEngine.fireEffect('flash', { color: 'rgba(255,215,0,0.5)', size: 'large', intensity: 1.0 });
+      }, 200);
+      setTimeout(function() {
+        MoodEngine.fireEffect('shockwave', { count: 7, color: '#ffd700', duration: 3000 });
+      }, 800);
+      setTimeout(function() {
+        MoodEngine.fireEffect('particles', {
+          particle: 'sparks', count: 40,
+          colors: ['#ffd700','#ff8c00','#ffffff','#ffe066','#ffaa00','#ff4444','#44ff44','#4444ff']
+        });
+      }, 1200);
+      setTimeout(function() {
+        MoodEngine.fireEffect('textGlow', { color: '#ffd700', duration: 4000 });
+      }, 1800);
+      setTimeout(function() {
+        MoodEngine.fireEffect('ambient', { particle: 'fireflies', count: 40 });
+      }, 2500);
+      setTimeout(function() {
+        MoodEngine.fireEffect('aura', { color: 'rgba(255,215,0,0.15)', intensity: 'bright' });
+      }, 3000);
+      setTimeout(function() {
+        MoodEngine.fireEffect('pulse', { color: '#ffd700', duration: 2000 });
+      }, 4000);
+    }
+  }
+
+});
+</script>
+
+</body>
+</html>
