@@ -1,0 +1,138 @@
+# Mood Gallery — RegTest scenarios
+# Collect 10 artifacts, deposit on pedestals in The Vault
+
+** game: ../mood.ulx
+
+* startup
+> look
+{vital}
+/Entrance Hall
+
+* full-run
+# Corridor: Entrance Hall -> Palette Gallery -> Vibe Showcase -> Typography Hall
+# -> Effects Lab -> Atmosphere Chamber -> Persistent Hall -> State Machine
+# -> Trigger Workshop -> The Vault
+
+# 1. Typography Hall: brass metronome
+> n
+> n
+> n
+> take brass metronome
+Taken
+
+# 2. East wing from Vibe Showcase: velvet bookmark (Gothic Study)
+> s
+> e
+> e
+> e
+> e
+> take velvet bookmark
+Taken
+> w
+> w
+> w
+> w
+
+# 3. East wing from Effects Lab: obsidian tuning fork (Shake Studio), mercury sphere (Wave Studio)
+> n
+> n
+> e
+> take obsidian tuning fork
+Taken
+> e
+> e
+> e
+> take mercury sphere
+Taken
+> w
+> w
+> w
+> w
+
+# 4. East wing from Atmosphere Chamber: glass snowglobe (Snowfield), amber ember stone (Furnace Walk)
+> n
+> e
+> e
+> take glass snowglobe
+Taken
+> e
+> e
+> e
+> take amber ember stone
+Taken
+> w
+> w
+> w
+> w
+> w
+
+# 5. East wing from Persistent Hall: silver compass (Sway Chamber)
+> n
+> e
+> take silver compass
+Taken
+> w
+
+# 6. East wing from State Machine: iron circuit board (Distortion Chamber)
+> n
+> e
+> take iron circuit board
+Taken
+> w
+
+# 7. East wing from Palette Gallery: crystal prism (Ice Vault)
+> s
+> s
+> s
+> s
+> s
+> s
+> e
+> e
+> e
+> e
+> e
+> take crystal prism
+Taken
+> w
+> w
+> w
+> w
+> w
+
+# 8. Trigger Workshop: golden key
+> n
+> n
+> n
+> n
+> n
+> n
+> n
+> take golden key
+Taken
+
+# Go to The Vault and deposit everything
+> n
+{vital}
+/Vault
+> put metronome on rhythm pedestal
+/score has just gone up
+> put bookmark on story pedestal
+/score has just gone up
+> put tuning fork on tremor pedestal
+/score has just gone up
+> put sphere on wave pedestal
+/score has just gone up
+> put snowglobe on winter pedestal
+/score has just gone up
+> put ember stone on fire pedestal
+/score has just gone up
+> put compass on balance pedestal
+/score has just gone up
+> put circuit board on signal pedestal
+/score has just gone up
+> put prism on light pedestal
+/score has just gone up
+> put key on passage pedestal
+{vital}
+/You have completed the Mood Gallery

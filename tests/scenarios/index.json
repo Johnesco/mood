@@ -1,0 +1,6 @@
+{
+  "scenarios": [
+    { "name": "startup", "title": "Entrance Hall", "category": "Smoke Tests" },
+    { "name": "full-run", "title": "Collect All 10 Artifacts (10/10)", "category": "Win Paths", "primary": true }
+  ]
+}

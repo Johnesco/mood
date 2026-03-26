@@ -1,0 +1,83 @@
+n
+n
+n
+take brass metronome
+s
+e
+e
+e
+e
+take velvet bookmark
+w
+w
+w
+w
+n
+n
+e
+take obsidian tuning fork
+e
+e
+e
+take mercury sphere
+w
+w
+w
+w
+n
+e
+e
+take glass snowglobe
+e
+e
+e
+take amber ember stone
+w
+w
+w
+w
+w
+n
+e
+take silver compass
+w
+n
+e
+take iron circuit board
+w
+s
+s
+s
+s
+s
+s
+e
+e
+e
+e
+e
+take crystal prism
+w
+w
+w
+w
+w
+n
+n
+n
+n
+n
+n
+n
+take golden key
+n
+put metronome on rhythm pedestal
+put bookmark on story pedestal
+put tuning fork on tremor pedestal
+put sphere on wave pedestal
+put snowglobe on winter pedestal
+put ember stone on fire pedestal
+put compass on balance pedestal
+put circuit board on signal pedestal
+put prism on light pedestal
+put key on passage pedestal

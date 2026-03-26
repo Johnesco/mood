@@ -1,0 +1,28 @@
+
+
+
+
+Mood Gallery
+A MoodEngine Showcase by The Curator
+Release 1 / Serial number 260322 / Inform 7 v10.1.2 / D
+Walk north along the gallery. Explore east for deeper examples. Find ten artifacts. Return them to The Vault.
+
+Entrance Hall
+A grand foyer of obsidian and brass. A plaque on the wall reads: 'Welcome to the Mood Gallery.'
+
+The corridor stretches north.
+
+
+> look
+Entrance Hall
+A grand foyer of obsidian and brass. A plaque on the wall reads: 'Welcome to the Mood Gallery.'
+
+The corridor stretches north.
+
+
+> score
+You have so far scored 0 out of a possible 10, in 2 turns.
+
+
+> quit
+Are you sure you want to quit? 

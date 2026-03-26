@@ -1,0 +1,28 @@
+{
+  "game": "Mood Gallery",
+  "timestamp": "2026-03-26T03:24:47+00:00",
+  "binary_hash": "0b3773cf",
+  "duration_seconds": 1.9,
+  "layers": {
+    "plotex": {
+      "status": "skip",
+      "detail": "not configured"
+    },
+    "regtest": {
+      "status": "pass",
+      "detail": "all assertions passed",
+      "failures": []
+    },
+    "scenarios": {
+      "status": "pass",
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "wins": 0,
+      "win_scenarios": [],
+      "duration": 0.8
+    }
+  },
+  "overall": "pass"
+}

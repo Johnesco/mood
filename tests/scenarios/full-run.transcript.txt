@@ -1,0 +1,714 @@
+
+
+
+
+Mood Gallery
+A MoodEngine Showcase by The Curator
+Release 1 / Serial number 260322 / Inform 7 v10.1.2 / D
+Walk north along the gallery. Explore east for deeper examples. Find ten artifacts. Return them to The Vault.
+
+Entrance Hall
+A grand foyer of obsidian and brass. A plaque on the wall reads: 'Welcome to the Mood Gallery.'
+
+The corridor stretches north.
+
+
+> n
+
+Palette Gallery
+A rotunda where the walls shift color as you turn. Panels demonstrate how palettes transition between zones.
+
+The corridor continues north. The Color Wing lies east. The Entrance Hall is south.
+
+You can see a warm-tones button and a cool-tones button here.
+
+
+> n
+
+Vibe Showcase
+A demonstration hall with six alcoves, each radiating a different atmosphere. Buttons on the central console let you sample each vibe.
+
+Individual vibe rooms lie east. The corridor continues north and south.
+
+You can see a cozy button, a stark button, a retro button, a gothic button and a clinical button here.
+
+
+> n
+
+Typography Hall
+Text samples orbit slowly through the air -- serif, sans-serif, monospace, blackletter. Each typeface tells the same story differently.
+
+The Font Room lies east. The corridor continues north and south.
+
+You can see a brass metronome here.
+
+
+> take brass metronome
+Taken.
+
+
+> s
+
+Vibe Showcase
+A demonstration hall with six alcoves, each radiating a different atmosphere. Buttons on the central console let you sample each vibe.
+
+Individual vibe rooms lie east. The corridor continues north and south.
+
+You can see a cozy button, a stark button, a retro button, a gothic button and a clinical button here.
+
+
+> e
+
+Cozy Alcove
+Warm lamplight spills from recessed sconces. The walls are paneled in walnut. A thick rug cushions your steps. This is the 'cozy' vibe.
+
+The Stark Chamber lies east. The Vibe Showcase is west.
+
+
+> e
+
+Stark Chamber
+Everything is white. White walls, white floor, white light. Shadows have been banished. This is the 'stark' vibe.
+
+The Retro Terminal lies east. The Cozy Alcove is west.
+
+
+> e
+
+Retro Terminal
+Green phosphor text scrolls across a curved CRT screen. The air hums with old electronics. This is the 'retro' vibe.
+
+The Gothic Study lies east. The Stark Chamber is west.
+
+
+> e
+
+Gothic Study
+Candlelight dances on leather spines. Velvet curtains frame stained glass. A writing desk holds a leather-bound journal. This is the 'gothic' vibe.
+
+The Clinical Suite lies east. The Retro Terminal is west.
+
+You can see a velvet bookmark here.
+
+
+> take velvet bookmark
+Taken.
+
+
+> w
+
+Retro Terminal
+Green phosphor text scrolls across a curved CRT screen. The air hums with old electronics. This is the 'retro' vibe.
+
+The Gothic Study lies east. The Stark Chamber is west.
+
+
+> w
+
+Stark Chamber
+Everything is white. White walls, white floor, white light. Shadows have been banished. This is the 'stark' vibe.
+
+The Retro Terminal lies east. The Cozy Alcove is west.
+
+
+> w
+
+Cozy Alcove
+Warm lamplight spills from recessed sconces. The walls are paneled in walnut. A thick rug cushions your steps. This is the 'cozy' vibe.
+
+The Stark Chamber lies east. The Vibe Showcase is west.
+
+
+> w
+
+Vibe Showcase
+A demonstration hall with six alcoves, each radiating a different atmosphere. Buttons on the central console let you sample each vibe.
+
+Individual vibe rooms lie east. The corridor continues north and south.
+
+You can see a cozy button, a stark button, a retro button, a gothic button and a clinical button here.
+
+
+> n
+
+Typography Hall
+Text samples orbit slowly through the air -- serif, sans-serif, monospace, blackletter. Each typeface tells the same story differently.
+
+The Font Room lies east. The corridor continues north and south.
+
+
+> n
+
+Effects Lab
+A vast control room lined with brass buttons, each labeled with an effect name. This is where cause meets effect.
+
+Deeper effect studios lie east. The corridor continues north and south.
+
+You can see a shake button, a flash button, a ripple button, a glitch button, a vignette button, a pulse button, an invert button, a text glow button, a shockwave button, a flood button, a drain button and a fade button here.
+
+
+> e
+
+Shake Studio
+Three platforms demonstrate shake intensity. Light, medium, and heavy -- each one labeled.
+
+The Flash Studio lies east. The Effects Lab is west.
+
+You can see an obsidian tuning fork, a light shake button and a heavy shake button here.
+
+
+> take obsidian tuning fork
+Taken.
+
+
+> e
+
+Flash Studio
+Mirrors line every wall. A light array hangs from the ceiling. Two buttons control the intensity.
+
+The Particle Studio lies east. The Shake Studio is west.
+
+You can see a dim flash button and a bright flash button here.
+
+
+> e
+
+Particle Studio
+Three chambers behind glass demonstrate different particle types. Buttons trigger each one.
+
+The Wave Studio lies east. The Flash Studio is west.
+
+You can see a glass button, a sparks button and an embers button here.
+
+
+> e
+
+Wave Studio
+A chamber bisected by a long trough of silvery liquid. Buttons control the water effects.
+
+The Particle Studio is west.
+
+You can see a mercury sphere, a ripple button, a flood button and a drain button here.
+
+
+> take mercury sphere
+Taken.
+
+
+> w
+
+Particle Studio
+Three chambers behind glass demonstrate different particle types. Buttons trigger each one.
+
+The Wave Studio lies east. The Flash Studio is west.
+
+You can see a glass button, a sparks button and an embers button here.
+
+
+> w
+
+Flash Studio
+Mirrors line every wall. A light array hangs from the ceiling. Two buttons control the intensity.
+
+The Particle Studio lies east. The Shake Studio is west.
+
+You can see a dim flash button and a bright flash button here.
+
+
+> w
+
+Shake Studio
+Three platforms demonstrate shake intensity. Light, medium, and heavy -- each one labeled.
+
+The Flash Studio lies east. The Effects Lab is west.
+
+You can see a light shake button and a heavy shake button here.
+
+
+> w
+
+Effects Lab
+A vast control room lined with brass buttons, each labeled with an effect name. This is where cause meets effect.
+
+Deeper effect studios lie east. The corridor continues north and south.
+
+You can see a shake button, a flash button, a ripple button, a glitch button, a vignette button, a pulse button, an invert button, a text glow button, a shockwave button, a flood button, a drain button and a fade button here.
+
+
+> n
+
+Atmosphere Chamber
+A crossroads of weather systems. You feel wind from the west, warmth from below, and cold from above -- all at once.
+
+Individual weather rooms lie east. The corridor continues north and south.
+
+You can see a leaves button, a snow button and a rain button here.
+
+
+> e
+
+Autumn Path
+Fallen leaves carpet the floor in amber and crimson. Bare branches arch overhead, though there are no trees. The air smells of woodsmoke.
+
+The Snowfield lies east. The Atmosphere Chamber is west.
+
+
+> e
+
+Snowfield
+Snow covers the floor in a thick blanket. Your breath fogs. Icicles hang from the ceiling. The silence is absolute.
+
+The Storm Gallery lies east. The Autumn Path is west.
+
+You can see a glass snowglobe here.
+
+
+> take glass snowglobe
+Taken.
+
+
+> e
+
+Storm Gallery
+A permanent storm rages here. Wind howls. Rain drives sideways. Lightning flickers. And yet, nothing is wet.
+
+The Dust Archive lies east. The Snowfield is west.
+
+
+> e
+
+Dust Archive
+A library of forgotten things. Shelves hold dust-covered clocks, photographs, and letters. Motes drift through beams of light from high windows.
+
+The Furnace Walk lies east. The Storm Gallery is west.
+
+
+> e
+
+Furnace Walk
+A corridor of red-hot metal. The walls glow with internal heat. The floor is warm through your shoes. Floating embers rise from grates below.
+
+The Twilight Garden lies east. The Dust Archive is west.
+
+You can see an amber ember stone here.
+
+
+> take amber ember stone
+Taken.
+
+
+> w
+
+Dust Archive
+A library of forgotten things. Shelves hold dust-covered clocks, photographs, and letters. Motes drift through beams of light from high windows.
+
+The Furnace Walk lies east. The Storm Gallery is west.
+
+
+> w
+
+Storm Gallery
+A permanent storm rages here. Wind howls. Rain drives sideways. Lightning flickers. And yet, nothing is wet.
+
+The Dust Archive lies east. The Snowfield is west.
+
+
+> w
+
+Snowfield
+Snow covers the floor in a thick blanket. Your breath fogs. Icicles hang from the ceiling. The silence is absolute.
+
+The Storm Gallery lies east. The Autumn Path is west.
+
+
+> w
+
+Autumn Path
+Fallen leaves carpet the floor in amber and crimson. Bare branches arch overhead, though there are no trees. The air smells of woodsmoke.
+
+The Snowfield lies east. The Atmosphere Chamber is west.
+
+
+> w
+
+Atmosphere Chamber
+A crossroads of weather systems. You feel wind from the west, warmth from below, and cold from above -- all at once.
+
+Individual weather rooms lie east. The corridor continues north and south.
+
+You can see a leaves button, a snow button and a rain button here.
+
+
+> n
+
+Persistent Hall
+A quiet corridor of dark marble where effects linger rather than flash. The air feels thick with accumulated presence.
+
+The persistent effect rooms lie east. The corridor continues north and south.
+
+You can see a sway button and a glow button here.
+
+
+> e
+
+Sway Chamber
+The room tilts gently left, then right, in a slow hypnotic rhythm. The floor is stable -- it is the world that moves.
+
+The Glow Chamber lies east. Persistent Hall is west.
+
+You can see a silver compass here.
+
+
+> take silver compass
+Taken.
+
+
+> w
+
+Persistent Hall
+A quiet corridor of dark marble where effects linger rather than flash. The air feels thick with accumulated presence.
+
+The persistent effect rooms lie east. The corridor continues north and south.
+
+You can see a sway button and a glow button here.
+
+
+> n
+
+State Machine
+A control room of dials and switches. Each one alters the fundamental fabric of what you perceive. Warning labels are everywhere.
+
+State demonstration rooms lie east. The corridor continues north and south.
+
+You can see a distortion dial, a chromatic dial and a static switch here.
+
+
+> e
+
+Distortion Chamber
+A room where straight lines do not exist. Every edge curves. Every corner bends. A perception lens sits in a frame at the center.
+
+The Chromatic Chamber lies east. The State Machine is west.
+
+You can see an iron circuit board here.
+
+
+> take iron circuit board
+Taken.
+
+
+> w
+
+State Machine
+A control room of dials and switches. Each one alters the fundamental fabric of what you perceive. Warning labels are everywhere.
+
+State demonstration rooms lie east. The corridor continues north and south.
+
+You can see a distortion dial, a chromatic dial and a static switch here.
+
+
+> s
+
+Persistent Hall
+A quiet corridor of dark marble where effects linger rather than flash. The air feels thick with accumulated presence.
+
+The persistent effect rooms lie east. The corridor continues north and south.
+
+You can see a sway button and a glow button here.
+
+
+> s
+
+Atmosphere Chamber
+A crossroads of weather systems. You feel wind from the west, warmth from below, and cold from above -- all at once.
+
+Individual weather rooms lie east. The corridor continues north and south.
+
+You can see a leaves button, a snow button and a rain button here.
+
+
+> s
+
+Effects Lab
+A vast control room lined with brass buttons, each labeled with an effect name. This is where cause meets effect.
+
+Deeper effect studios lie east. The corridor continues north and south.
+
+You can see a shake button, a flash button, a ripple button, a glitch button, a vignette button, a pulse button, an invert button, a text glow button, a shockwave button, a flood button, a drain button and a fade button here.
+
+
+> s
+
+Typography Hall
+Text samples orbit slowly through the air -- serif, sans-serif, monospace, blackletter. Each typeface tells the same story differently.
+
+The Font Room lies east. The corridor continues north and south.
+
+
+> s
+
+Vibe Showcase
+A demonstration hall with six alcoves, each radiating a different atmosphere. Buttons on the central console let you sample each vibe.
+
+Individual vibe rooms lie east. The corridor continues north and south.
+
+You can see a cozy button, a stark button, a retro button, a gothic button and a clinical button here.
+
+
+> s
+
+Palette Gallery
+A rotunda where the walls shift color as you turn. Panels demonstrate how palettes transition between zones.
+
+The corridor continues north. The Color Wing lies east. The Entrance Hall is south.
+
+You can see a warm-tones button and a cool-tones button here.
+
+
+> e
+
+Dark Gallery
+Shadow dominates every surface. Muted earth tones absorb the light. The 'dark' color preset.
+
+More colors lie east. The Palette Gallery is west.
+
+
+> e
+
+Parchment Chamber
+Warm amber light seeps from the walls as if the chamber itself were made of aged paper. The 'parchment' preset.
+
+The Sepia Passage lies east. The Dark Gallery is west.
+
+
+> e
+
+Sepia Passage
+Everything here wears the tint of a faded photograph. Brown and gold, frozen in time. The 'sepia' preset.
+
+The Terminal Bay lies east. The Parchment Chamber is west.
+
+
+> e
+
+Terminal Bay
+Phosphor green on black. The walls hum with electric potential. The 'terminal' preset.
+
+The Ice Vault lies east. The Sepia Passage is west.
+
+
+> e
+
+Ice Vault
+Pale blue-white surfaces gleam. Your breath fogs in the cold light. The 'ice' preset.
+
+The Clinical Bay lies east. The Terminal Bay is west.
+
+You can see a crystal prism here.
+
+
+> take crystal prism
+Taken.
+
+
+> w
+
+Terminal Bay
+Phosphor green on black. The walls hum with electric potential. The 'terminal' preset.
+
+The Ice Vault lies east. The Sepia Passage is west.
+
+
+> w
+
+Sepia Passage
+Everything here wears the tint of a faded photograph. Brown and gold, frozen in time. The 'sepia' preset.
+
+The Terminal Bay lies east. The Parchment Chamber is west.
+
+
+> w
+
+Parchment Chamber
+Warm amber light seeps from the walls as if the chamber itself were made of aged paper. The 'parchment' preset.
+
+The Sepia Passage lies east. The Dark Gallery is west.
+
+
+> w
+
+Dark Gallery
+Shadow dominates every surface. Muted earth tones absorb the light. The 'dark' color preset.
+
+More colors lie east. The Palette Gallery is west.
+
+
+> w
+
+Palette Gallery
+A rotunda where the walls shift color as you turn. Panels demonstrate how palettes transition between zones.
+
+The corridor continues north. The Color Wing lies east. The Entrance Hall is south.
+
+You can see a warm-tones button and a cool-tones button here.
+
+
+> n
+
+Vibe Showcase
+A demonstration hall with six alcoves, each radiating a different atmosphere. Buttons on the central console let you sample each vibe.
+
+Individual vibe rooms lie east. The corridor continues north and south.
+
+You can see a cozy button, a stark button, a retro button, a gothic button and a clinical button here.
+
+
+> n
+
+Typography Hall
+Text samples orbit slowly through the air -- serif, sans-serif, monospace, blackletter. Each typeface tells the same story differently.
+
+The Font Room lies east. The corridor continues north and south.
+
+
+> n
+
+Effects Lab
+A vast control room lined with brass buttons, each labeled with an effect name. This is where cause meets effect.
+
+Deeper effect studios lie east. The corridor continues north and south.
+
+You can see a shake button, a flash button, a ripple button, a glitch button, a vignette button, a pulse button, an invert button, a text glow button, a shockwave button, a flood button, a drain button and a fade button here.
+
+
+> n
+
+Atmosphere Chamber
+A crossroads of weather systems. You feel wind from the west, warmth from below, and cold from above -- all at once.
+
+Individual weather rooms lie east. The corridor continues north and south.
+
+You can see a leaves button, a snow button and a rain button here.
+
+
+> n
+
+Persistent Hall
+A quiet corridor of dark marble where effects linger rather than flash. The air feels thick with accumulated presence.
+
+The persistent effect rooms lie east. The corridor continues north and south.
+
+You can see a sway button and a glow button here.
+
+
+> n
+
+State Machine
+A control room of dials and switches. Each one alters the fundamental fabric of what you perceive. Warning labels are everywhere.
+
+State demonstration rooms lie east. The corridor continues north and south.
+
+You can see a distortion dial, a chromatic dial and a static switch here.
+
+
+> n
+
+Trigger Workshop
+A testing chamber lined with sensor arrays. Different trigger mechanisms are demonstrated here -- text patterns, room detection, zone awareness.
+
+The Trigger Lab lies east. The Vault lies north. The State Machine is south.
+
+You can see a golden key and a test button here.
+
+
+> take golden key
+Taken.
+
+
+> n
+
+Vault
+A solemn circular chamber of black stone. Ten pedestals stand in a ring, each carved from a different material and lit from above by a narrow beam of light. This is where the artifacts belong.
+
+The Trigger Workshop lies south.
+
+You can see a light pedestal, a rhythm pedestal, a story pedestal, a tremor pedestal, a wave pedestal, a winter pedestal, a fire pedestal, a balance pedestal, a signal pedestal and a passage pedestal here.
+
+
+> put metronome on rhythm pedestal
+You place the brass metronome on the pedestal. It settles with a satisfying click.
+
+[Your score has just gone up by one point.]
+
+
+> put bookmark on story pedestal
+You place the velvet bookmark on the pedestal. It settles with a satisfying click.
+
+[Your score has just gone up by one point.]
+
+
+> put tuning fork on tremor pedestal
+You place the obsidian tuning fork on the pedestal. It settles with a satisfying click.
+
+[Your score has just gone up by one point.]
+
+
+> put sphere on wave pedestal
+You place the mercury sphere on the pedestal. It settles with a satisfying click.
+
+[Your score has just gone up by one point.]
+
+
+> put snowglobe on winter pedestal
+You place the glass snowglobe on the pedestal. It settles with a satisfying click.
+
+[Your score has just gone up by one point.]
+
+
+> put ember stone on fire pedestal
+You place the amber ember stone on the pedestal. It settles with a satisfying click.
+
+[Your score has just gone up by one point.]
+
+
+> put compass on balance pedestal
+You place the silver compass on the pedestal. It settles with a satisfying click.
+
+[Your score has just gone up by one point.]
+
+
+> put circuit board on signal pedestal
+You place the iron circuit board on the pedestal. It settles with a satisfying click.
+
+[Your score has just gone up by one point.]
+
+
+> put prism on light pedestal
+You place the crystal prism on the pedestal. It settles with a satisfying click.
+
+[Your score has just gone up by one point.]
+
+
+> put key on passage pedestal
+You place the golden key on the pedestal. It settles with a satisfying click.
+
+
+The gallery resonates. Every pedestal glows. The walls themselves seem to sing.
+
+
+
+    *** You have completed the Mood Gallery ***
+
+
+In that game you scored 10 out of a possible 10, in 83 turns.
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+
+> score
+ Please give one of the answers above.
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+
+> quit
+ 
