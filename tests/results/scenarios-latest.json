@@ -1,6 +1,6 @@
 {
   "game": "Mood Gallery",
-  "regtest_file": "mood\\tests\\mood.regtest",
+  "regtest_file": "C:\\code\\text-games\\i7\\mood\\tests\\mood.regtest",
   "seed": "",
   "duration_seconds": 0.8,
   "total": 2,
@@ -10,16 +10,36 @@
   "wins": 0,
   "win_scenarios": [],
   "primary": null,
+  "assertions": {
+    "total": 22,
+    "passed": 22,
+    "failed": 0
+  },
   "scenarios": [
     {
       "name": "startup",
-      "commands": 1,
-      "transcript_lines": 28,
-      "exit_code": 0,
-      "output_file": "mood\\tests\\scenarios\\startup.transcript.txt",
-      "commands_file": "mood\\tests\\scenarios\\startup.commands.txt",
-      "seed": "",
       "status": "pass",
+      "seed": "",
+      "commands": 1,
+      "transcript_lines": 24,
+      "exit_code": 0,
+      "transcript_file": "C:\\code\\text-games\\i7\\mood\\tests\\scenarios\\startup.transcript.txt",
+      "commands_file": "C:\\code\\text-games\\i7\\mood\\tests\\scenarios\\startup.commands.txt",
+      "assertions": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "failures": [],
+        "details": [
+          {
+            "check": "/Entrance Hall",
+            "command": "look",
+            "cmd_idx": 1,
+            "passed": true,
+            "response": "Entrance Hall\nA grand foyer of obsidian and brass. A plaque on the wall reads: 'Welcome to the Mood Gallery.'\n\nThe corridor stretches north."
+          }
+        ]
+      },
       "score": "",
       "win": false,
       "won_text": false,
@@ -36,13 +56,168 @@
     },
     {
       "name": "full-run",
-      "commands": 83,
-      "transcript_lines": 714,
-      "exit_code": 0,
-      "output_file": "mood\\tests\\scenarios\\full-run.transcript.txt",
-      "commands_file": "mood\\tests\\scenarios\\full-run.commands.txt",
-      "seed": "",
       "status": "pass",
+      "seed": "",
+      "commands": 83,
+      "transcript_lines": 711,
+      "exit_code": 0,
+      "transcript_file": "C:\\code\\text-games\\i7\\mood\\tests\\scenarios\\full-run.transcript.txt",
+      "commands_file": "C:\\code\\text-games\\i7\\mood\\tests\\scenarios\\full-run.commands.txt",
+      "assertions": {
+        "total": 21,
+        "passed": 21,
+        "failed": 0,
+        "failures": [],
+        "details": [
+          {
+            "check": "Taken",
+            "command": "take brass metronome",
+            "cmd_idx": 4,
+            "passed": true,
+            "response": "Taken."
+          },
+          {
+            "check": "Taken",
+            "command": "take velvet bookmark",
+            "cmd_idx": 10,
+            "passed": true,
+            "response": "Taken."
+          },
+          {
+            "check": "Taken",
+            "command": "take obsidian tuning fork",
+            "cmd_idx": 18,
+            "passed": true,
+            "response": "Taken."
+          },
+          {
+            "check": "Taken",
+            "command": "take mercury sphere",
+            "cmd_idx": 22,
+            "passed": true,
+            "response": "Taken."
+          },
+          {
+            "check": "Taken",
+            "command": "take glass snowglobe",
+            "cmd_idx": 30,
+            "passed": true,
+            "response": "Taken."
+          },
+          {
+            "check": "Taken",
+            "command": "take amber ember stone",
+            "cmd_idx": 34,
+            "passed": true,
+            "response": "Taken."
+          },
+          {
+            "check": "Taken",
+            "command": "take silver compass",
+            "cmd_idx": 42,
+            "passed": true,
+            "response": "Taken."
+          },
+          {
+            "check": "Taken",
+            "command": "take iron circuit board",
+            "cmd_idx": 46,
+            "passed": true,
+            "response": "Taken."
+          },
+          {
+            "check": "Taken",
+            "command": "take crystal prism",
+            "cmd_idx": 59,
+            "passed": true,
+            "response": "Taken."
+          },
+          {
+            "check": "Taken",
+            "command": "take golden key",
+            "cmd_idx": 72,
+            "passed": true,
+            "response": "Taken."
+          },
+          {
+            "check": "/Vault",
+            "command": "n",
+            "cmd_idx": 73,
+            "passed": true,
+            "response": "Vault\nA solemn circular chamber of black stone. Ten pedestals stand in a ring, each carved from a different material and lit from above by a narrow beam of light. This is where the artifacts belong.\n\nThe Trigger Workshop lies south.\n\nYou can see a light pedestal, a rhythm pedestal, a story pedestal,..."
+          },
+          {
+            "check": "/score has just gone up",
+            "command": "put metronome on rhythm pedestal",
+            "cmd_idx": 74,
+            "passed": true,
+            "response": "You place the brass metronome on the pedestal. It settles with a satisfying click.\n\n[Your score has just gone up by one point.]"
+          },
+          {
+            "check": "/score has just gone up",
+            "command": "put bookmark on story pedestal",
+            "cmd_idx": 75,
+            "passed": true,
+            "response": "You place the velvet bookmark on the pedestal. It settles with a satisfying click.\n\n[Your score has just gone up by one point.]"
+          },
+          {
+            "check": "/score has just gone up",
+            "command": "put tuning fork on tremor pedestal",
+            "cmd_idx": 76,
+            "passed": true,
+            "response": "You place the obsidian tuning fork on the pedestal. It settles with a satisfying click.\n\n[Your score has just gone up by one point.]"
+          },
+          {
+            "check": "/score has just gone up",
+            "command": "put sphere on wave pedestal",
+            "cmd_idx": 77,
+            "passed": true,
+            "response": "You place the mercury sphere on the pedestal. It settles with a satisfying click.\n\n[Your score has just gone up by one point.]"
+          },
+          {
+            "check": "/score has just gone up",
+            "command": "put snowglobe on winter pedestal",
+            "cmd_idx": 78,
+            "passed": true,
+            "response": "You place the glass snowglobe on the pedestal. It settles with a satisfying click.\n\n[Your score has just gone up by one point.]"
+          },
+          {
+            "check": "/score has just gone up",
+            "command": "put ember stone on fire pedestal",
+            "cmd_idx": 79,
+            "passed": true,
+            "response": "You place the amber ember stone on the pedestal. It settles with a satisfying click.\n\n[Your score has just gone up by one point.]"
+          },
+          {
+            "check": "/score has just gone up",
+            "command": "put compass on balance pedestal",
+            "cmd_idx": 80,
+            "passed": true,
+            "response": "You place the silver compass on the pedestal. It settles with a satisfying click.\n\n[Your score has just gone up by one point.]"
+          },
+          {
+            "check": "/score has just gone up",
+            "command": "put circuit board on signal pedestal",
+            "cmd_idx": 81,
+            "passed": true,
+            "response": "You place the iron circuit board on the pedestal. It settles with a satisfying click.\n\n[Your score has just gone up by one point.]"
+          },
+          {
+            "check": "/score has just gone up",
+            "command": "put prism on light pedestal",
+            "cmd_idx": 82,
+            "passed": true,
+            "response": "You place the crystal prism on the pedestal. It settles with a satisfying click.\n\n[Your score has just gone up by one point.]"
+          },
+          {
+            "check": "/You have completed the Mood Gallery",
+            "command": "put key on passage pedestal",
+            "cmd_idx": 83,
+            "passed": true,
+            "response": "You place the golden key on the pedestal. It settles with a satisfying click.\n\n\nThe gallery resonates. Every pedestal glows. The walls themselves seem to sing.\n\n\n\n    *** You have completed the Mood Gallery ***\n\n\nIn that game you scored 10 out of a possible 10, in 83 turns.\n\n\nWould you like to RESTA..."
+          }
+        ]
+      },
       "score": "",
       "win": false,
       "won_text": false,

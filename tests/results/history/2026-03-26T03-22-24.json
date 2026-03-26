@@ -1,8 +1,8 @@
 {
   "game": "mood",
-  "timestamp": "2026-03-26T08:26:37+00:00",
+  "timestamp": "2026-03-26T08:22:24+00:00",
   "binary_hash": "0b3773cf",
-  "duration_seconds": 0.9,
+  "duration_seconds": 1.4,
   "layers": {
     "plotex": {
       "status": "skip",
@@ -21,7 +21,7 @@
         "passed": 22,
         "failed": 0
       },
-      "duration": 0.8
+      "duration": 1.1
     }
   },
   "overall": "pass"
